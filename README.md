@@ -1,6 +1,6 @@
 # Vaqessa — Django + React E-Commerce App
 
-A full-stack e-commerce web application built with **Django REST Framework** (backend) and **React.js** (frontend), featuring JWT authentication, product catalog, cart management, checkout, and **Razorpay payment integration**.
+A full-stack e-commerce web application built with **Django REST Framework** (backend) and **React.js** (frontend), featuring JWT authentication, product catalog, cart management and checkout.
 
 The application supports secure JWT-based authentication, product browsing, shopping cart management, order creation, Razorpay checkout, payment verification, and paid order tracking.
 
