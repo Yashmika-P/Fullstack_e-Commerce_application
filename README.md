@@ -1,4 +1,4 @@
-# ShopEase — Django + React E-Commerce App
+# Vaqessa — Django + React E-Commerce App
 
 A full-stack e-commerce web application built with **Django REST Framework** (backend) and **React.js** (frontend), featuring JWT authentication, product catalog, cart management, checkout, and **Razorpay payment integration**.
 
