@@ -1,0 +1,144 @@
+.checkout-form {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #e4d9e6;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(43, 25, 61, 0.07);
+}
+
+/* Form inputs */
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+
+  border: 1px solid #d8c9d9;
+  border-radius: 10px;
+
+  background: #fffdfb;
+  color: #211c24;
+
+  font-size: 0.9rem;
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus,
+.checkout-form select:focus {
+  border-color: #9b7eae;
+  box-shadow: 0 0 0 4px rgba(155, 126, 174, 0.12);
+}
+
+.checkout-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Labels */
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #553267;
+
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+/* Checkout summary */
+
+.checkout-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 24px;
+  padding-top: 20px;
+
+  border-top: 1px solid #e2d8e3;
+
+  font-size: 1.1rem;
+  font-weight: 750;
+
+  color: #2b193d;
+}
+
+.checkout-summary span:last-child {
+  color: #6f4e37;
+}
+
+/* Payment information */
+
+.payment-placeholder {
+  margin-top: 18px;
+  padding: 14px 16px;
+
+  background: #eee5f0;
+  border: 1px dashed #9b7eae;
+  border-radius: 11px;
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+
+  color: #553267;
+}
+
+/* Primary checkout button */
+
+.checkout-form .btn-primary {
+  width: 100%;
+
+  margin-top: 22px;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #553267;
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.checkout-form .btn-primary:hover:not(:disabled) {
+  background: #2b193d;
+  transform: translateY(-2px);
+  box-shadow: 0 9px 20px rgba(43, 25, 61, 0.18);
+}
+
+.checkout-form .btn-primary:disabled {
+  background: #cfc5d2;
+  cursor: not-allowed;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .checkout-form {
+    margin: 0 16px;
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .checkout-summary {
+    font-size: 1rem;
+  }
+}
