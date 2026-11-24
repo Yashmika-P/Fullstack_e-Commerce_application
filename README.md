@@ -1,84 +1,198 @@
-Vaqessa – Django + React E-Commerce App
+🛍️ Vaqessa – Full-Stack E-Commerce Application
 
-A full-stack e-commerce web application built using Django REST Framework for the backend and React.js for the frontend.
+<p align="center">
+  A hands-on full-stack e-commerce application built using
+  <b>Python, Django REST Framework and React.js</b>.
+  <br/>
+  Exploring real-world web development through product management,
+  authentication, REST APIs and shopping cart functionality.
+</p><p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/DRF-A30000?style=for-the-badge"/>
+</p><p align="center">
+  <img src="https://img.shields.io/badge/Project-Personal%20Learning-purple"/>
+  <img src="https://img.shields.io/badge/Status-Under%20Development-orange"/>
+</p>---
 
-The application features user authentication, product browsing, category filtering, search, shopping cart management, checkout, and order tracking.
+📌 About the Project
 
-Tech Stack
-Layer	Technology
-Backend	Django, Django REST Framework
-Authentication	JWT (djangorestframework-simplejwt)
-Database	SQLite, Django ORM
-Frontend	React.js, React Router
-State Management	React Context API
-HTTP Client	Axios
-Notifications	React Toastify
-CORS	django-cors-headers
+Vaqessa is a full-stack e-commerce web application developed as a hands-on project to explore the development of modern web applications.
 
-Key Features
-User registration and login with JWT authentication.
-Product listing and detailed product views.
-Category-based product filtering.
-Product search and sorting.
-Shopping cart management (add, update, and remove items).
-Checkout and order creation.
-Order history and order details.
-Automatic JWT access token refresh using Axios interceptors.
-Django admin panel for managing application data.
+The application combines a React-based frontend with a Django REST Framework backend, providing a structured approach to handling user interactions, product data, API communication and shopping cart operations.
 
-Project Structure
+The primary objective is to gain practical experience in full-stack development, backend architecture, database operations and frontend-backend integration.
 
-ecommerce-project/
+✨ Key Features
+
+Feature| Description
+👤 User Management| User registration and login
+🛍️ Product Catalogue| Browse and explore available products
+🔎 Product Search| Search and filter products
+🏷️ Categories| Browse products by category
+🛒 Shopping Cart| Add, update and remove cart items
+🔗 REST APIs| Backend APIs using Django REST Framework
+⚙️ Admin Panel| Manage application data through Django Admin
+🔄 Frontend Integration| React and Django API communication
+
+🛠️ Tech Stack
+
+Technology| Purpose
+Python| Backend programming
+Django| Backend framework
+Django REST Framework| REST API development
+React.js| Frontend development
+JavaScript| Frontend functionality
+React Router| Client-side navigation
+Context API| State management
+Axios| HTTP requests and API integration
+SQLite| Database
+
+🏗️ Application Architecture
+
+          ┌──────────────────────┐
+          │     React Frontend   │
+          │                      │
+          │  Components & Pages  │
+          │  Context API         │
+          └──────────┬───────────┘
+                     │
+                  Axios
+                     │
+                     ▼
+          ┌──────────────────────┐
+          │   Django REST API    │
+          │                      │
+          │  Views & Serializers │
+          │  Business Logic      │
+          └──────────┬───────────┘
+                     │
+                     ▼
+          ┌──────────────────────┐
+          │      SQLite DB       │
+          │                      │
+          │ Users, Products,     │
+          │ Cart & Orders         │
+          └──────────────────────┘
+
+📂 Project Structure
+
+Fullstack_e-Commerce_application/
 │
 ├── backend/
-│   ├── backend/          # Project settings and root URLs
-│   ├── accounts/         # User model and authentication APIs
-│   ├── core/             # Category and Product models and APIs
-│   ├── orders/           # Cart, Order, and OrderItem models and APIs
+│   ├── backend/
+│   ├── accounts/
+│   ├── core/
+│   ├── orders/
 │   ├── manage.py
 │   └── requirements.txt
 │
-└── frontend/
-    ├── src/
-    │   ├── api/          # Axios configuration
-    │   ├── context/      # AuthContext and CartContext
-    │   ├── components/   # Reusable components
-    │   └── pages/        # Application pages
-    └── package.json
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── context/
+│   │   ├── components/
+│   │   └── pages/
+│   └── package.json
+│
+└── README.md
 
+🚀 Getting Started
 
-Backend Setup
-bash
+Follow these steps to run the project locally.
+
+Prerequisites
+
+- Python 3.x
+- Node.js and npm
+- Git
+
+1. Clone the Repository
+
+git clone https://github.com/Yashmika-P/Fullstack_e-Commerce_application.git
+
+cd Fullstack_e-Commerce_application
+
+2. Set Up the Backend
+
 cd backend
 
-python3 -m venv venv
+python -m venv venv
+
+Activate the virtual environment:
+
+Windows
+
+venv\Scripts\activate
+
+Linux / macOS
+
 source venv/bin/activate
 
-# Windows: venv\Scripts\activate
+Install dependencies:
 
 pip install -r requirements.txt
 
-python3 manage.py migrate
-python3 manage.py seed_data
-python3 manage.py createsuperuser
+Run database migrations:
 
-python3 manage.py runserver
+python manage.py migrate
 
+Create an admin account:
 
-Backend URL: http://127.0.0.1:8000/
+python manage.py createsuperuser
 
-Admin Panel: http://127.0.0.1:8000/admin/
+Start the backend server:
 
-Frontend Setup
-bash
+python manage.py runserver
+
+Backend: "http://127.0.0.1:8000/"
+
+3. Set Up the Frontend
+
+Open a new terminal:
+
 cd frontend
 
 npm install
+
 npm run dev
 
+Frontend: "http://localhost:5173/"
 
-Frontend URL: http://localhost:5173/
+Make sure the frontend API configuration points to the running Django backend.
 
-The API base URL is configured in src/api/axios.js.
+📚 Key Learning Areas
 
-Technologies: Python, JavaScript, Django, Django REST Framework, React.js, React Router, React Context API, Axios, JWT, SQLite.
+- Building RESTful APIs with Django REST Framework.
+- Understanding Django models, views and serializers.
+- Connecting React applications with backend services.
+- Managing frontend state using Context API.
+- Performing database operations using Django ORM.
+- Structuring and developing a full-stack application.
+
+🔮 Future Enhancements
+
+- Complete checkout and order processing workflow.
+- Implement simulated payment and transaction management.
+- Improve authentication and authorization.
+- Add transaction history and payment status tracking.
+- Enhance validation and error handling.
+
+👩‍💻 Author
+
+Yashmika P.
+
+<p align="left">
+  <a href="https://github.com/Yashmika-P">
+    <img src="https://img.shields.io/badge/GitHub-Yashmika--P-181717?style=for-the-badge&logo=github"/>
+  </a>
+  <a href="https://www.linkedin.com/in/yashmika-p-3568a2253">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin"/>
+  </a>
+</p>---
+
+<p align="center">
+  ⭐ <i>Built to learn, experiment and grow as a full-stack developer.</i>
+</p>
