@@ -1,198 +1,174 @@
-🛍️ Vaqessa – Full-Stack E-Commerce Application
+Vaqessa | E-Commerce Web Application
 
-<p align="center">
-  A hands-on full-stack e-commerce application built using
-  <b>Python, Django REST Framework and React.js</b>.
-  <br/>
-  Exploring real-world web development through product management,
-  authentication, REST APIs and shopping cart functionality.
-</p><p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/DRF-A30000?style=for-the-badge"/>
-</p><p align="center">
-  <img src="https://img.shields.io/badge/Project-Personal%20Learning-purple"/>
-  <img src="https://img.shields.io/badge/Status-Under%20Development-orange"/>
-</p>---
+A full-stack e-commerce application developed as a hands-on project using Python, Django REST Framework and React.js. The project focuses on practical experience in backend development, REST API integration, database management and frontend development.
 
-📌 About the Project
+Project Status: Under Development
+Project Type: Personal Learning Project
 
-Vaqessa is a full-stack e-commerce web application developed as a hands-on project to explore the development of modern web applications.
+---
 
-The application combines a React-based frontend with a Django REST Framework backend, providing a structured approach to handling user interactions, product data, API communication and shopping cart operations.
+Overview
 
-The primary objective is to gain practical experience in full-stack development, backend architecture, database operations and frontend-backend integration.
+Vaqessa is a web-based e-commerce application designed to explore the core functionalities of an online shopping platform. It combines a React frontend with a Django REST Framework backend to manage product information, user interactions and shopping cart operations.
 
-✨ Key Features
+Technology Stack
+
+Category| Technologies
+Backend| Python, Django
+API Development| Django REST Framework
+Frontend| React.js, JavaScript
+Routing| React Router
+State Management| React Context API
+API Communication| Axios
+Database| SQLite
+Styling| CSS
+
+Features
 
 Feature| Description
-👤 User Management| User registration and login
-🛍️ Product Catalogue| Browse and explore available products
-🔎 Product Search| Search and filter products
-🏷️ Categories| Browse products by category
-🛒 Shopping Cart| Add, update and remove cart items
-🔗 REST APIs| Backend APIs using Django REST Framework
-⚙️ Admin Panel| Manage application data through Django Admin
-🔄 Frontend Integration| React and Django API communication
+User Management| User registration and login
+Product Catalogue| Browse products and view product details
+Search & Filtering| Search and filter available products
+Shopping Cart| Add, update and remove products
+REST APIs| Backend API development and integration
+Admin Panel| Manage application data through Django Admin
 
-🛠️ Tech Stack
+Application Architecture
 
-Technology| Purpose
-Python| Backend programming
-Django| Backend framework
-Django REST Framework| REST API development
-React.js| Frontend development
-JavaScript| Frontend functionality
-React Router| Client-side navigation
-Context API| State management
-Axios| HTTP requests and API integration
-SQLite| Database
+<pre>
+       React Frontend
+              |
+              |  HTTP Requests (Axios)
+              |
+       Django REST Framework
+              |
+              |  Django ORM
+              |
+        SQLite Database
+</pre>Project Structure
 
-🏗️ Application Architecture
-
-          ┌──────────────────────┐
-          │     React Frontend   │
-          │                      │
-          │  Components & Pages  │
-          │  Context API         │
-          └──────────┬───────────┘
-                     │
-                  Axios
-                     │
-                     ▼
-          ┌──────────────────────┐
-          │   Django REST API    │
-          │                      │
-          │  Views & Serializers │
-          │  Business Logic      │
-          └──────────┬───────────┘
-                     │
-                     ▼
-          ┌──────────────────────┐
-          │      SQLite DB       │
-          │                      │
-          │ Users, Products,     │
-          │ Cart & Orders         │
-          └──────────────────────┘
-
-📂 Project Structure
-
+<pre>
 Fullstack_e-Commerce_application/
 │
 ├── backend/
-│   ├── backend/
 │   ├── accounts/
 │   ├── core/
 │   ├── orders/
+│   ├── backend/
 │   ├── manage.py
 │   └── requirements.txt
 │
 ├── frontend/
 │   ├── src/
 │   │   ├── api/
-│   │   ├── context/
 │   │   ├── components/
+│   │   ├── context/
 │   │   └── pages/
 │   └── package.json
 │
 └── README.md
-
-🚀 Getting Started
-
-Follow these steps to run the project locally.
+</pre>Installation & Setup
 
 Prerequisites
 
-- Python 3.x
-- Node.js and npm
-- Git
+Requirement| Version
+Python| 3.x
+Node.js| Compatible with the frontend dependencies
+npm| Compatible with Node.js
+Git| Latest available version
 
 1. Clone the Repository
 
+<pre>
 git clone https://github.com/Yashmika-P/Fullstack_e-Commerce_application.git
 
 cd Fullstack_e-Commerce_application
+</pre>2. Backend Setup
 
-2. Set Up the Backend
+Navigate to the backend directory:
 
+<pre>
 cd backend
+</pre>Create a virtual environment:
 
+<pre>
 python -m venv venv
+</pre>Activate the virtual environment.
 
-Activate the virtual environment:
+Windows:
 
-Windows
-
+<pre>
 venv\Scripts\activate
+</pre>Linux / macOS:
 
-Linux / macOS
-
+<pre>
 source venv/bin/activate
+</pre>Install the required dependencies:
 
-Install dependencies:
-
+<pre>
 pip install -r requirements.txt
+</pre>Apply database migrations:
 
-Run database migrations:
-
+<pre>
 python manage.py migrate
+</pre>Create an administrator account:
 
-Create an admin account:
-
+<pre>
 python manage.py createsuperuser
+</pre>Start the development server:
 
-Start the backend server:
-
+<pre>
 python manage.py runserver
+</pre>Backend: http://127.0.0.1:8000/
 
-Backend: "http://127.0.0.1:8000/"
+Admin Panel: http://127.0.0.1:8000/admin/
 
-3. Set Up the Frontend
+3. Frontend Setup
 
-Open a new terminal:
+Open a new terminal and navigate to the frontend directory:
 
+<pre>
 cd frontend
+</pre>Install dependencies:
 
+<pre>
 npm install
+</pre>Start the development server:
 
+<pre>
 npm run dev
+</pre>Frontend: http://localhost:5173/
 
-Frontend: "http://localhost:5173/"
+Ensure that the frontend API configuration points to the running Django backend.
 
-Make sure the frontend API configuration points to the running Django backend.
+Learning Objectives
 
-📚 Key Learning Areas
-
-- Building RESTful APIs with Django REST Framework.
+- Developing REST APIs using Django REST Framework.
 - Understanding Django models, views and serializers.
-- Connecting React applications with backend services.
-- Managing frontend state using Context API.
+- Integrating React frontend with Django backend.
 - Performing database operations using Django ORM.
-- Structuring and developing a full-stack application.
+- Managing application state using React Context API.
+- Working with API requests and frontend-backend communication.
+- Understanding full-stack application architecture.
 
-🔮 Future Enhancements
+Planned Enhancements
 
-- Complete checkout and order processing workflow.
-- Implement simulated payment and transaction management.
+- Complete checkout and order management workflow.
+- Implement simulated payment and transaction processing.
 - Improve authentication and authorization.
-- Add transaction history and payment status tracking.
-- Enhance validation and error handling.
+- Add transaction history and payment status management.
+- Enhance application validation and error handling.
 
-👩‍💻 Author
+---
+
+Author
 
 Yashmika P.
 
-<p align="left">
-  <a href="https://github.com/Yashmika-P">
-    <img src="https://img.shields.io/badge/GitHub-Yashmika--P-181717?style=for-the-badge&logo=github"/>
-  </a>
-  <a href="https://www.linkedin.com/in/yashmika-p-3568a2253">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin"/>
-  </a>
-</p>---
+"GitHub" (https://github.com/Yashmika-P) · "LinkedIn" (https://www.linkedin.com/in/yashmika-p-3568a2253)
+
+---
 
 <p align="center">
-  ⭐ <i>Built to learn, experiment and grow as a full-stack developer.</i>
+  <i>A hands-on project built to learn, experiment and grow as a full-stack developer.</i>
 </p>
